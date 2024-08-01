@@ -282,7 +282,9 @@ import Note from './components/Note';
 import axios from 'axios';
 import noteService from './services/phone';
 
-const baseUrl = 'http://localhost:3001/api/notes'; // to work with backend
+//const baseUrl = 'http://localhost:3001/api/notes'; // to work with backend
+const baseUrl = process.env.REACT_APP_API_URL || '/api/notes'; // to work with render
+
 
 const App = () => {
   const [persons, setPersons] = useState([]);
